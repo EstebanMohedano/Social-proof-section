@@ -16,6 +16,9 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      body{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -23,34 +26,308 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      .main{
+        background: 
+        url("./images/bg-pattern-top-desktop.svg") top 0px left 0px no-repeat,
+        url("./images/bg-pattern-bottom-desktop.svg") bottom 0px right 0px no-repeat;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-template-rows:repeat(2, auto);        
+        height: 80vh;        
+        margin: 2.5rem;
+        padding:2.5rem;
+        box-shadow: 2px 2px 3px 4px rgba(247, 242,248,0.8);
+      }
+
+      .topleft {
+        grid-column: span 2;
+        grid-row: 1;                
+        height: 35vh;
+        width: 100%;
+        color:rgb(81, 31, 82);
+        padding: 10px;
+      }
+      .topleft p{
+        color:rgb(117, 114, 117);
+        font-size: 0.8rem;
+        
+      }
+
+      h1{
+        width: 70%;
+      }
+
+      .topright {
+        grid-column: span 4;
+        grid-row: 1;
+        
+      }
+      ul{
+        display: flex;    
+        flex-direction:column;
+        text-align: center; 
+        list-style-type: none;        
+        margin: 0;
+        padding: 0;
+      }
+
+      .stars{
+        display: flex;
+        flex-direction:row;
+        width: 120px;
+      }
+      .start{
+        display: block;
+        width: 22px;        
+        height: 22px;           
+        background: url(./images/icon-star.svg) no-repeat;                
+        margin: 3px;
+      }
+      li span{
+        margin-left: 25px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color:rgb(81, 31, 82);
+      }    
+     
+      li{                      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;                
+        height: 5rem;
+        width: 65%;
+        margin: 0.5rem;
+        background-color: rgba(247, 242,248,10.5);
+        border-radius: 10px;
+      }
+
+      li:nth-child(2){
+        align-self: center;    
+      }
+
+      li:nth-child(3){
+        align-self:flex-end;    
+      }
+
+      .bottom {
+        grid-column: span 6;
+        grid-row: 2;
+        height: 40vh;
+        display: flex;        
+        padding: 5px;                
+      }
+
+      .bottomleft,
+      .bottomcenter,
+      .bottomright {        
+        display: block;
+        font-size: 0.8rem;        
+        background-color: rgb(81, 31, 82);        
+        width:33%;
+        height: 20vh;
+        padding: 30px;
+        margin: 8px;
+        border-radius: 10px;
+        color:rgb(216, 216, 210);
+      }
+
+      .bottomcenter{        
+        align-self: center;        
+      }
+
+      .bottomright { 
+        align-self:flex-end;
+      }
+      .topcard {
+        
+        display: flex;
+        height: 4rem;   
+        
+      }
+      .name{
+        font-size: 0.9rem;        
+        margin-left: 2rem;
+      }
+      .name p{
+        position: relative;
+        top: -10px;
+      }
+      .name strong{
+        font-weight:bolder;
+      }
+      .name span{        
+        color:rgb(226, 96, 228);
+      }
+      .images{ 
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+      }
+     
+      @media screen and (max-width: 576px) {
+      .main,
+      .topleft,
+      .topright,
+      .bottom,
+      li {        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;      
+        text-align: center;
+        width: 100%;
+      }
+
+        .main{
+        background: 
+        url("./images/bg-pattern-top-mobile.svg") top 0px left 0px no-repeat,
+        url("./images/bg-pattern-bottom-mobile.svg") bottom -0px right 0px no-repeat;
+        margin: 10px;
+        padding: 5px;
+        height: 100%;
+        width: 93%;
+
+      }
+      h1{
+        
+      }
+      .topright{        
+        width: 90%;       
+      }
+      
+      .topleft{
+        height: 35vh;
+        width: 90%;        
+      }
+
+      ul{
+        display: flex;
+        padding: 0;
+        margin: 0;
+      }
+
+      li{        
+        width: 100%;
+        padding: 0;        
+      }
+
+      li:nth-child(3){
+        align-self: center;
+      }
+
+      li span{
+        margin: 0;
+      }
+
+      .bottom {
+        height: 100%;
+        width: 95%;        
+        margin: 0;
+        padding: 0;
+      }
+
+      .bottomleft,
+      .bottomcenter,
+      .bottomright {
+        text-align: left;
+        width: 82%;
+        align-self: center;      }
+
+    }
+
+       
     </style>
   </head>
   <body>
-    10,000+ of our users love our products.
+    <div class="main">
+      <div class="topleft">
+        <h1>
+          10,000+ of our users love our products.
+        </h1>
+        <p>
+          We only provide great products combined with excellent customer service.
+          See what our satisfied customers are saying about our services.  
+        </p>    
+      </div>
+      
+      <ul class="topright">
+        <li>
+          <div class="stars">
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+          </div>
+          <span>Rated 5 Stars in Reviews</span>
+        </li>
+        <li>
+          <div class="stars">
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+          </div>
+          <span>Rated 5 Stars in Report Guru</span>
+        </li>
+        <li>
+          <div class="stars">
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+            <div class="start"></div>
+          </div>
+          <span>Rated 5 Stars in BestTech</span>
+        </li>
+      </ul>     
+      <div class="bottom">
+        <div class="bottomleft">
+          <div class="topcard">          
+          <img class="images" src="./images/image-colton.jpg" alt="image-colton"> 
+          <div class="name">
+            <strong>Colton Smith</strong>
+            <p><span>Verified Buyer</span></p>
+          </div>
+        </div>                      
+          <p><i></i>
+            "We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"
+          </i></p>          
+        </div>
 
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
+        <div class="bottomcenter">
+          <div class="topcard">
+            <img class="images" src="./images/image-irene.jpg" alt="image-irene"> 
+            <div class="name">
+              <strong>Irene Roberts</strong>
+              <p><span>Verified Buyer</span></p>
+            </div>
+          </div>          
+          <p><i></i>
+            "Customer service is always excellent and very quick turn around. Completely
+            delighted with the simplicity of the purchase and the speed of delivery."
+          </i></p>
+        </div>
 
+        <div class="bottomright">
+          <div class="topcard">
+            <img class="images" src="./images/image-anne.jpg" alt="image-anne">
+            <div class="name">
+              <strong>Anne Wallace</strong>
+              <p><span>Verified Buyer</span></p>
+            </div>
+          </div>   
+          <p><i>
+            "Put an order with this company and can only praise them for the very high
+            standard. Will definitely use them again and recommend them to everyone!"
+          </i></p>
+        </div>
+      </div>
+  </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
